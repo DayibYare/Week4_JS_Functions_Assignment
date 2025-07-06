@@ -19,11 +19,23 @@ Output: "The late fee is $2.50."
 // ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
 
 
-
 // Extra Task:
 // - Convert the function into a function expression.
 
+function calculateLateFee() {
+  const overdueDays = prompt("Enter the number of overdue days:");
+  const days = parseFloat(overdueDays);
+  
+  if (isNaN(days) || days < 0) {
+    console.log("Invalid input. Please enter a valid number of days.");
+    return;
+  }
+  
+  const fee = days * 0.25;
+  console.log(`The late fee is $${fee.toFixed(2)}.`);
+}
 
+calculateLateFee(); // Call the function
 
 /*
 Task 2 : Favorite Color Finder 🚀🚀🚀🚀
@@ -49,7 +61,29 @@ Output: "Red: You are passionate and bold."
 
 // Extra Task:
 // - Rewrite the function using an arrow function.
+function findColorMeaning() {
+  const color = prompt("What is your favorite color?").toLowerCase();
+  
+  if (color === "blue") {
+    console.log("Blue: You love calm and peace.");
+    
+  }
+  if (color === "red") {
+    console.log("Red: You are passionate and bold.");
+    
+  }
+  if (color === "green") {
+    console.log("Green: You are connected to nature.");
+    
+  }
+  if (color === "yellow") {
+    console.log("Yellow: You radiate happiness and energy.");
+    
+  }
+  console.log("That's a unique choice!");
+}
 
+findColorMeaning();
 
 
 /*
@@ -72,7 +106,10 @@ Output: "Case #12345: John Doe's case is now logged."
 
 // Extra Task:
 // - Rewrite the function as an arrow function.
-
+function logCase(clientName, caseNumber) {
+  console.log(`Case #${caseNumber}: ${clientName}'s case is now logged.`);
+}
+logCase("John Doe", 12345);
 
 /*
 Task 4 : Attendance Tracker 🚀🚀🚀🚀
@@ -98,7 +135,16 @@ Output: "Amina is present."
 
 // Extra Task:
 // - Convert the function into a function expression.
+function markAttendance(studentName, isPresent) {
+  if (isPresent) {
+    console.log(`${studentName} is present.`);
+  } else {
+    console.log(`${studentName} is absent.`);
+  }
+}
 
+markAttendance("Asha", true);  
+markAttendance("Ali", false);   
 
 
 /*
